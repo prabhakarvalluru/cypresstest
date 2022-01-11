@@ -1,0 +1,41 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "name",
+    "line": 1,
+    "id": "name",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "name;scenar",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "scenar",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I login",
+            "result": {
+              "status": "undefined",
+              "duration": 110000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I logout",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

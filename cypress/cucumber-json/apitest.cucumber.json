@@ -1,0 +1,82 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Hello Feature",
+    "line": 1,
+    "id": "hello-feature",
+    "tags": [],
+    "uri": "apitest.feature",
+    "elements": [
+      {
+        "id": "hello-feature;scenario1",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "scenario1",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I launch website",
+            "result": {
+              "status": "passed",
+              "duration": 4530000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I check the title of webpage contains \"Automation Practice\"",
+            "result": {
+              "status": "passed",
+              "duration": 53000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "hello-feature;scenario2",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "scenario2",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I launch website",
+            "result": {
+              "status": "passed",
+              "duration": 2074000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I need to validate if \"Home\" link is present",
+            "result": {
+              "status": "passed",
+              "duration": 47000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I select \"Appium\" value from dropdown",
+            "result": {
+              "status": "passed",
+              "duration": 512000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
