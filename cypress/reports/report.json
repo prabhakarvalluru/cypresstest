@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 1,
-    "start": "2022-01-11T17:34:54.345Z",
-    "end": "2022-01-11T17:35:35.544Z",
-    "duration": 41199,
+    "start": "2022-01-13T16:27:04.388Z",
+    "end": "2022-01-13T16:27:51.076Z",
+    "duration": 46688,
     "testsRegistered": 2,
     "passPercent": 50,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c1e8e479-b155-43f0-b160-f3fafefde907",
+      "uuid": "b39bb9eb-5878-4e6a-8abe-c36e9b538435",
       "title": "",
       "fullFile": "cypress/integration/apitest.feature",
       "file": "cypress/integration/apitest.feature",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d764c78b-9337-460b-8871-b76622a7d49d",
-          "title": "name",
+          "uuid": "da8b33c9-f523-4967-9ce8-75d5228db30a",
+          "title": "Hello Feature",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,9 +36,9 @@
           "tests": [
             {
               "title": "scenario1",
-              "fullTitle": "name scenario1",
+              "fullTitle": "Hello Feature scenario1",
               "timedOut": null,
-              "duration": 36354,
+              "duration": 41180,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,16 +51,16 @@
                 "estack": "CypressError: `cy.screenshot()` timed out waiting `30000ms` to complete.\n    at https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:159685:81\n    at tryCatcher (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:13196:23)\n    at https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:8318:41\n    at tryCatcher (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:11309:18)\n    at _drainQueueStep (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:7903:12)\n    at _drainQueue (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:7896:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:7912:5)\n    at Async.drainQueues (https://codenboxautomationlab.com/__cypress/runner/cypress_runner.js:7782:14)",
                 "diff": null
               },
-              "uuid": "56cb86b6-73b6-4039-a92c-554236884093",
-              "parentUUID": "d764c78b-9337-460b-8871-b76622a7d49d",
+              "uuid": "79d0f3d4-adb3-42ca-908d-a14f155ee03b",
+              "parentUUID": "da8b33c9-f523-4967-9ce8-75d5228db30a",
               "isHook": false,
               "skipped": false
             },
             {
               "title": "scenario2",
-              "fullTitle": "name scenario2",
+              "fullTitle": "Hello Feature scenario2",
               "timedOut": null,
-              "duration": 2236,
+              "duration": 2286,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -69,22 +69,22 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "6d1aca97-097b-466f-97b3-008b595cad33",
-              "parentUUID": "d764c78b-9337-460b-8871-b76622a7d49d",
+              "uuid": "9dc4edf6-9bb0-4bc8-96fb-18a1b4b6777d",
+              "parentUUID": "da8b33c9-f523-4967-9ce8-75d5228db30a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6d1aca97-097b-466f-97b3-008b595cad33"
+            "9dc4edf6-9bb0-4bc8-96fb-18a1b4b6777d"
           ],
           "failures": [
-            "56cb86b6-73b6-4039-a92c-554236884093"
+            "79d0f3d4-adb3-42ca-908d-a14f155ee03b"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 38590,
+          "duration": 43466,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -120,7 +120,7 @@
       "options": {
         "reportDir": "cypress/reports",
         "reportFilename": "report",
-        "overwrite": false,
+        "overwrite": true,
         "html": true,
         "json": true,
         "charts": true

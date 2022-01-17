@@ -1,35 +1,74 @@
 import { expect } from 'chai';
-import {HomePage} from '../pages/HomePage';
+import homepageo from '../pages/HomePage.js';
 import {Given, When} from 'cypress-cucumber-preprocessor/steps'
 import { includes } from 'lodash';
-//const cypress = require('cypress')
+import 'cypress-xpath';
 
+// Important Block- data reading from Fixtures
+let userDetails;
+let exampledata;
+beforeEach (()=> {
+    cy.fixture('testData.json').then(user =>{
+        userDetails=user;
+    })
+    cy.fixture('example.json').then(example =>{
+        exampledata=example;
+    })
+});
 
 Given('I launch website',()=>{
-    cy.visit('https://codenboxautomationlab.com/practice/');
-    cy.url().should('include', 'practice');
+    cy.visit(userDetails.URL);
+    cy.injectAxe();
 
+    cy.url().should('include', 'practice');
+//    cy.checkA11y();
+//cy.customCheckAlly();
+    cy.xpath('//*[@id="name"]').type(userDetails.email);
+    
 })
-//const  xy=new HomePage();
 
 
 When('I check the title of webpage contains {string}', pageTitle=>{
-    cy.get('.page-title').invoke('text').then((text1) =>{
+
+    homepageo.pageTitle().invoke('text').then((text1) =>{
         expect(text1.trim()).to.equal(pageTitle)
     })
 });
 
 Given('I need to validate if {string} link is present',hometext=>{
-cy.get('#menu-item-62 > a').invoke('text').then((text1) =>{
+
+    homepageo.homeLink().invoke('text').then((text1) =>{
     expect(text1.trim()).to.equal(hometext)
 })
 });
 
 When('I select "Appium" value from dropdown',appium=>{
-    cy.get('#dropdown-class-example').select('Appium').should('have.value','option2');
+    homepageo.dropDown().select('Appium').should('have.value','option2');
    // cy.get('select').select('apples').should('have.value', '456')
 
 })
+
+When ('I write the data into file',()=>{
+cy.writeFile('TestFile_Write.txt', 'First line\n ');
+cy.writeFile('TestFile_Write.txt', 'Second line',{flag:'a+'});
+
+})
+
+Then ('I Read the data into file',()=>{
+    cy.readFile('TestFile_Write').should('include','First line\nSecond line');
+    
+    })
+
+    When('I read data using Fixtures',()=>{
+        cy.visit(userDetails.URL);
+        cy.url().should('include','practice')
+        cy.xpath('//*[@id="name"]').type(exampledata.body);
+    
+    }
+
+    
+    
+
 
 
 
@@ -76,9 +115,4 @@ When('I select "Appium" value from dropdown',appium=>{
 //     expect(response.body.job).to.equal('leader');
 
 // })
-
-
-
-
-// });
-
+    ) 

@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-14T00:03:08.734Z",
+    "end": "2022-01-14T00:03:13.861Z",
+    "duration": 5127,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6adaf4ea-7e55-46ec-92c9-c350a2383e0c",
+      "title": "",
+      "fullFile": "cypress/integration/apitest.feature",
+      "file": "cypress/integration/apitest.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "452c8051-61aa-41b7-acb7-8ef06445bb8c",
+          "title": "Hello Feature",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "scenario1",
+              "fullTitle": "Hello Feature scenario1",
+              "timedOut": null,
+              "duration": 1700,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "0c95db5e-171a-4ea2-b323-e66e798431bb",
+              "parentUUID": "452c8051-61aa-41b7-acb7-8ef06445bb8c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "scenario2",
+              "fullTitle": "Hello Feature scenario2",
+              "timedOut": null,
+              "duration": 654,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "82245356-2e85-49eb-84db-429cd560445c",
+              "parentUUID": "452c8051-61aa-41b7-acb7-8ef06445bb8c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c95db5e-171a-4ea2-b323-e66e798431bb",
+            "82245356-2e85-49eb-84db-429cd560445c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.0.1"
+    }
+  }
+}

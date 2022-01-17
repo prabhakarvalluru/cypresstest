@@ -5,9 +5,16 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
+    "cy:test-open-report": "cypress open -b chrome --spec 'cypress/integration/apitest.feature' & node ./cypress/cucumber-html-report.js",
+    "cy:test": "cypress run --spec 'cypress/integration/apitest.feature'",
+    "cy:test-headless": "cypress run --headless --spec 'cypress/integration/apitest.feature' & node ./cypress/cucumber-html-report.js",
+    "cy:test-firefox": "cypress run -b firefox --spec 'cypress/integration/apitest.feature' & node ./cypress/cucumber-html-report.js",
+    "cy:test-chrome-passreport": "cypress run -b chrome --spec 'cypress/integration/apitest.feature' & node ./cypress/cucumber-html-report.js",
+    "cy:test-chrome-fail": "not working cypress run -b chrome --spec 'cypress/integration/apitest.feature' & node ./cypress/cucumber-html-report.js",
     "cy:dashboard": "cypress run --record --key fde590d0-0132-4ec1-acb3-d9c28fe0891a",
-    "cy:report": "node ./cypress/report.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "posttest": "node ./cypress/report.js",
+    "test": "cypress run --spec 'cypress/integration/apitest.feature' & node ./cypress/report.js",
+    "cy:generate": "node cypress/cucumber-html-report.js"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +22,6 @@
   "dependencies": {
     "@types/lodash": "^4.14.178",
     "chai": "^4.3.4",
-    "cypress": "^9.2.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "expect": "^27.4.6",
     "lodash": "^4.17.21",
@@ -23,18 +29,22 @@
   },
   "cypress-cucumber-preprocessor": {
     "cucumberJson": {
-      "generate": true
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber",
+      "timestamp": "mmddyyyy_HHMMss"
     },
     "nonGlobalStepDefinitions": true,
     "stepDefinitions": "cypress/integration/apitest/"
   },
-  "cucumberJson": {
-    "generate": true,
-    "outputFolder": "cypress/cucumber-json",
-    "filePrefix": "",
-    "fileSuffix": ".cucumber"
-  },
   "devDependencies": {
+    "axe-core": "^4.3.5",
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^9.2.1",
+    "cypress-axe": "^0.14.0",
+    "cypress-plugin-snapshots": "^1.4.4",
+    "cypress-xpath": "^1.6.2",
     "mochawesome": "^7.0.1",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.0.1",

@@ -22,7 +22,7 @@
             "name": "I launch website",
             "result": {
               "status": "passed",
-              "duration": 4530000000
+              "duration": 4688000000
             }
           },
           {
@@ -32,7 +32,7 @@
             "name": "I check the title of webpage contains \"Automation Practice\"",
             "result": {
               "status": "passed",
-              "duration": 53000000
+              "duration": 59000000
             }
           }
         ]
@@ -47,12 +47,12 @@
         "steps": [
           {
             "arguments": [],
-            "keyword": "Given ",
+            "keyword": "When ",
             "line": 13,
-            "name": "I launch website",
+            "name": "I read data using Fixtures",
             "result": {
               "status": "passed",
-              "duration": 2074000000
+              "duration": 5974000000
             }
           },
           {
@@ -62,7 +62,7 @@
             "name": "I need to validate if \"Home\" link is present",
             "result": {
               "status": "passed",
-              "duration": 47000000
+              "duration": 85000000
             }
           },
           {
@@ -72,7 +72,27 @@
             "name": "I select \"Appium\" value from dropdown",
             "result": {
               "status": "passed",
-              "duration": 512000000
+              "duration": 483000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I write the data into file",
+            "result": {
+              "status": "passed",
+              "duration": 360000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I Read the data into file",
+            "result": {
+              "status": "passed",
+              "duration": 235000000
             }
           }
         ]

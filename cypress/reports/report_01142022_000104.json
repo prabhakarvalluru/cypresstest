@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-14T00:00:55.889Z",
+    "end": "2022-01-14T00:01:04.898Z",
+    "duration": 9009,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "779b94c9-3fa7-4061-a3f9-f659166983aa",
+      "title": "",
+      "fullFile": "cypress/integration/apitest.feature",
+      "file": "cypress/integration/apitest.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ce1eec7-f9d4-401d-9e66-24442562cdb7",
+          "title": "Hello Feature",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "scenario1",
+              "fullTitle": "Hello Feature scenario1",
+              "timedOut": null,
+              "duration": 5670,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.page-tite`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.page-tite`, but never found it.\n    at Context.eval (https://codenboxautomationlab.com/__cypress/tests?p=cypress\\integration\\apitest.feature:51:6)\n    at Context.resolveAndRunStepDefinition (https://codenboxautomationlab.com/__cypress/tests?p=cypress\\integration\\apitest.feature:20366:29)\n    at Context.eval (https://codenboxautomationlab.com/__cypress/tests?p=cypress\\integration\\apitest.feature:19687:35)",
+                "diff": null
+              },
+              "uuid": "a04285b9-563e-46f9-bd23-9f995c5e76b3",
+              "parentUUID": "2ce1eec7-f9d4-401d-9e66-24442562cdb7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "scenario2",
+              "fullTitle": "Hello Feature scenario2",
+              "timedOut": null,
+              "duration": 752,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "4d134d80-474c-4b1c-ad32-faeea1227bfd",
+              "parentUUID": "2ce1eec7-f9d4-401d-9e66-24442562cdb7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4d134d80-474c-4b1c-ad32-faeea1227bfd"
+          ],
+          "failures": [
+            "a04285b9-563e-46f9-bd23-9f995c5e76b3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6422,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.0.1"
+    }
+  }
+}

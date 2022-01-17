@@ -1,0 +1,68 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Hello Feature",
+    "line": 1,
+    "id": "hello-feature",
+    "tags": [],
+    "uri": "testing.feature",
+    "elements": [
+      {
+        "id": "hello-feature;scenario2",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "scenario2",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I read data using Fixtures",
+            "result": {
+              "status": "undefined",
+              "duration": 101000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I need to validate if \"Home\" link is present",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I select \"Appium\" value from dropdown",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I write the data into file",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I Read the data into file",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
