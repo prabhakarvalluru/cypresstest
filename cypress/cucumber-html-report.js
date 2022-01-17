@@ -1,17 +1,36 @@
-const report = require('multiple-cucumber-html-reporter');
+var reporter = require('cucumber-html-reporter');
+var options = {
 
-report.generate({
-	jsonDir: 'cypress/cucumber-json',
-	reportPath: './reports/cucumber-htmlreport.html',
-	metadata:{
-        browser: {
-            name: 'chrome',
-            version: '60'
-        },
-        device: 'Local test machine',
-        platform: {
-            name: 'windows',
-            version: '10'
-        },
-    },
-});
+        theme: 'bootstrap',
+
+        jsonFile: 'cypress/cucumber-json',
+
+        output: './reports/cucumber-html.html',
+
+        reportSuiteAsScenarios: true,
+
+        scenarioTimestamp: true,
+
+        launchReport: true,
+
+        timestamp:true,
+
+        metadata: {
+
+            "App Version":"0.1",
+
+            "Test Environment": "Test",
+
+            "Browser": "Chrome  96.0",
+
+            "Platform": "Windows 10",
+
+            "Parallel": "Scenarios",
+
+            "Executed": "Remote",
+
+        }
+
+    };
+
+    reporter.generate(options);
